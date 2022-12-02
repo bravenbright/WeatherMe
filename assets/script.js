@@ -7,7 +7,7 @@ const apiKey = "daae0aee67b04aea9f68cce1499b0a63"
 // const weatherNow = 
 
 function getApi() { 
-    var requestUrl = 'https://api.weatherbit.io/v2.0/current' + '?key=' + apiKey + '&postal_code=98092&country=US';
+    var requestUrl = 'https://api.weatherbit.io/v2.0/current' + '?key=' + apiKey + '&postal_code=76502&country=US';
 
     fetch(requestUrl)
     .then(function(response){
