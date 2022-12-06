@@ -1,10 +1,16 @@
 // this variable should insert the h2 that will hold the temperature of a zipcode
 
 const apiKey = "daae0aee67b04aea9f68cce1499b0a63"
+
+//google custom search variabless
 const searchApiKey = 'AIzaSyAUaXQtGxf5XAyA-aMru4Fu1OyU5C0919k';
+const searchEngineId = '93dfd1403c28d4a84';
+const searchUrl = 'https://www.googleapis.com/customsearch/v1?key=' + searchApiKey + '&cx=' + searchEngineId ;
+
 // document.getElementById('temperature').appendChild(currentTemp);
 // this variable should have the current weather temperature
 // const weatherNow = 
+
 
 function getApi() { 
     var requestUrl = 'https://api.weatherbit.io/v2.0/current' + '?key=' + apiKey + '&postal_code=76502&country=US';
