@@ -1,8 +1,7 @@
-// this variable should insert the h2 that will hold the temperature of a zipcode
 
-const apiKey = "daae0aee67b04aea9f68cce1499b0a63"
+const weatherApiKey = "daae0aee67b04aea9f68cce1499b0a63"
 
-//google custom search variabless
+//custom search variables
 const searchApiKey = 'AIzaSyAUaXQtGxf5XAyA-aMru4Fu1OyU5C0919k';
 const searchEngineId = '93dfd1403c28d4a84';
 const searchUrl = 'https://www.googleapis.com/customsearch/v1?key=' + searchApiKey + '&cx=' + searchEngineId ;
@@ -13,12 +12,13 @@ const searchUrl = 'https://www.googleapis.com/customsearch/v1?key=' + searchApiK
 
 
 function getApi() { 
-    var requestUrl = 'https://api.weatherbit.io/v2.0/current' + '?key=' + apiKey + '&postal_code=76502&country=US';
+    var requestUrl = 'https://api.weatherbit.io/v2.0/current' + '?key=' + weatherApiKey + '&postal_code=76502&country=US';
 
     fetch(requestUrl)
     .then(function(response){
         return response.json()
     })
+    // .then(function(data){
     .then(function(data) {
         console.log(data);
         // console.log(data.data[0].weather.description)
@@ -29,3 +29,4 @@ function getApi() {
 }
 
 getApi()
+
