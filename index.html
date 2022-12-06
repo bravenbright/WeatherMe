@@ -25,7 +25,13 @@
     <body>
     <form>
         <label for="zipNumber">Zipcode:</label>
-        <input type="number" id="zipNumber" name="zipcode" min="5" max="5">
+        <input
+            type="text"
+            id="zipcode"
+            onkeyup="getApi()"
+            name="zipcode"
+            maxlength="5"
+        >
     </form>
 
     <section id="todays-date">
