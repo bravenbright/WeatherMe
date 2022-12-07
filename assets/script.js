@@ -8,8 +8,22 @@ const searchUrl = 'https://www.googleapis.com/customsearch/v1?key=' + searchApiK
 
 // document.getElementById('temperature').appendChild(currentTemp);
 // this variable should have the current weather temperature
-// const weatherNow = 
+// const weatherNow =
+ 
+let btnShow = document.querySelector('button');
+let output = document.querySelector('h4');
 
+btnShow.addEventListener('click', () => {
+    let today = new Date();
+
+    let month = today.getMonth() + 1;
+    let year = today.getFullYear();
+    let date = today.getDate();
+
+    let current_date = `${month}/${date}/${year}`
+    output.innerText = current_date;
+
+})
 
 function getApi() {
     let zipcode = document.getElementById('zipcode').value;
@@ -30,6 +44,7 @@ function getApi() {
             document.body.appendChild(temperature)
         })
     }
+
 }
 
 

@@ -8,19 +8,22 @@
     <link rel="stylesheet" href="./assets/style.css">
     <title>WeatherMe</title>
 </head>
-
+<!-- font class="is-size-x" is-uppercase is-italic "has-text-weight-bold/weight" class="title/subtitle" -->
+<!-- has-text-centered -->
     <header>
-        <h1>WeatherMe</h1>
+        <h1 class="is-size-1 has-text-centered">WeatherMe</h1>
+          <section class="py-6" id="todays-date"></section>
+        
+        <button>Show</button>
+    <h4 class="is-size-2" style="text-align: center;">Result</h4>
         <nav>
             <ul>
+
                 <a id="zipNumber"><li>Choose Zipcode</li></a>
                 <!-- <li>Choose Animals</li> -->
-                
             </ul>
         </nav>
     </header>
-
-
 <main>
     <body>
     <form>
@@ -34,16 +37,16 @@
         >
     </form>
 
-    <section id="todays-date">
         <script async src="https://cse.google.com/cse.js?cx=93dfd1403c28d4a84">
         </script>
         <div class="gcse-search"></div>
 
-    </section>
-    <section id="image-quote-display">
+
+    
+    <section class="py-6" id="image-quote-display">
 
     </section>
-    <section id="weather-data">
+    <section class="py-6" id="weather-data">
         
     </section>
 </body>
@@ -54,5 +57,5 @@
     </footer>
     <script src="./assets/script.js"></script>
 
-</body>
+
 </html>
