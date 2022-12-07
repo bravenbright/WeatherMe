@@ -11,8 +11,22 @@ let averageWeather = "average+day+recipes"
 
 // document.getElementById('temperature').appendChild(currentTemp);
 // this variable should have the current weather temperature
-// const weatherNow = 
+// const weatherNow =
+ 
+let btnShow = document.querySelector('button');
+let output = document.querySelector('h4');
 
+btnShow.addEventListener('click', () => {
+    let today = new Date();
+
+    let month = today.getMonth() + 1;
+    let year = today.getFullYear();
+    let date = today.getDate();
+
+    let current_date = `${month}/${date}/${year}`
+    output.innerText = current_date;
+
+})
 
 function getApi() {
     let zipcode = document.getElementById('zipcode').value;
@@ -31,8 +45,23 @@ function getApi() {
             const temperature = document.createElement("h2")
             temperature.textContent = data.data[0].temp;
             document.body.appendChild(temperature)
+            
+        
+     searchUrl = 'https://www.googleapis.com/customsearch/v1?key=' + searchApiKey + '&cx=' + searchEngineId + '&q=' + data.data[0].temp; 
+        fetch(searchUrl)
+        .then(function(response) {
+            return response.json();
         })
+
+        .then(function (data) {
+            console.log(data);
+            
+        })
+    })
+     
+    
     }
+
 }
 
 if (temperature > 80) {
