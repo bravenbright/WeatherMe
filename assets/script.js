@@ -42,8 +42,9 @@ function getApi() {
             const temperature = document.createElement("h2")
             temperature.textContent = data.data[0].temp;
             document.body.appendChild(temperature)
+            
         
-     searchUrl = 'https://www.googleapis.com/customsearch/v1?key=' + searchApiKey + '&cx=' + searchEngineId + '&q=' + temperature; 
+     searchUrl = 'https://www.googleapis.com/customsearch/v1?key=' + searchApiKey + '&cx=' + searchEngineId + '&q=' + data.data[0].temp; 
         fetch(searchUrl)
         .then(function(response) {
             return response.json();
@@ -51,7 +52,7 @@ function getApi() {
 
         .then(function (data) {
             console.log(data);
-        
+            
         })
     })
      
