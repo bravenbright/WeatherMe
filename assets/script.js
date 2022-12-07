@@ -40,7 +40,7 @@ function getApi() {
             console.log(data);
             // console.log(data.data[0].weather.description)
             const temperature = document.createElement("h2")
-            temperature.textContent = data.data[0].weather.description;
+            temperature.textContent = data.data[0].temp;
             document.body.appendChild(temperature)
         
      searchUrl = 'https://www.googleapis.com/customsearch/v1?key=' + searchApiKey + '&cx=' + searchEngineId + '&q=' + temperature; 
