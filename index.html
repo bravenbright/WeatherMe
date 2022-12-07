@@ -12,31 +12,44 @@
 <!-- has-text-centered -->
     <header>
         <h1 class="is-size-1 has-text-centered">WeatherMe</h1>
+          <section class="py-6" id="todays-date"></section>
         
         <button>Show</button>
     <h4 class="is-size-2" style="text-align: center;">Result</h4>
         <nav>
             <ul>
-                <li class="py-6">Choose Location</li>
-                <li class="py-6">Choose Animals</li>
-                
+
+                <a id="zipNumber"><li>Choose Zipcode</li></a>
+                <!-- <li>Choose Animals</li> -->
             </ul>
         </nav>
     </header>
-    
-
 <main>
+    <body>
+    <form>
+        <label for="zipNumber">Zipcode:</label>
+        <input
+            type="text"
+            id="zipcode"
+            onkeyup="getApi()"
+            name="zipcode"
+            maxlength="5"
+        >
+    </form>
+
+        <script async src="https://cse.google.com/cse.js?cx=93dfd1403c28d4a84">
+        </script>
+        <div class="gcse-search"></div>
+
+
     
-
-    <section class="py-6" id="todays-date">
-
-    </section>
     <section class="py-6" id="image-quote-display">
 
     </section>
     <section class="py-6" id="weather-data">
         
     </section>
+</body>
 </main>
 
     <footer>
