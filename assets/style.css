@@ -1,9 +1,109 @@
 
 @import
- "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+"https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+        
+ *{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+ }
 
  body {
-    background-color: rgba(51, 122, 255, 0.795);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
 
-}
+ nav {
+    background: rgb(48, 85, 98);
+    height: 80px;
+    height:100%;
+ }
+
+ label.logo {
+    color: white;
+    font-size: 34px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+ }
+
+ nav ul {
+    float: right;
+    margin-right: 20px;
+ }
+
+ nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+ }
+
+ nav ul li a {
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 3px;
+ }
+
+ .active,a:hover{
+    transition: .5s;
+ }
+
+ .checkbutton {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+ }
+
+ #check {
+    display: none;
+ }
+
+ @media (max-width:952px){
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font: 16px;
+     }
+ }
+
+ @media (max-width: 858px){
+    .checkbutton {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(93, 141, 170);
+        top: 80px;
+        left:-100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover, a.active{
+        background: none;
+        color: white;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+ }
 

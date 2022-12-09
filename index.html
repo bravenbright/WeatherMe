@@ -7,30 +7,30 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/style.css">
     <title>WeatherMe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script
       src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
       integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
       crossorigin="anonymous"
     ></script>
 </head>
-<!-- font class="is-size-x" is-uppercase is-italic "has-text-weight-bold/weight" class="title/subtitle" -->
-<!-- has-text-centered -->
-    <header>
-        <h1 class="is-size-1 has-text-centered">WeatherMe</h1>
-          <section class="py-6" id="todays-date"></section>
-        
-        <button>Show</button>
-    <h4 class="is-size-2" style="text-align: center;">Result</h4>
-        <nav>
-            <ul>
 
-                <a id="zipNumber"><li>Choose Zipcode</li></a>
-                <!-- <li>Choose Animals</li> -->
-            </ul>
-        </nav>
-    </header>
+<body>
+    <nav>
+       <input type="checkbox" id="check">
+       <label for="check" class="checkbutton">
+            <i class="fa fa-bars"></i>
+       </label>
+       <label class="logo">WeatherMe</label>
+       <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="zipNumber">Choose Zipcode</a></li>
+        <li><a href="#">Temperature</a></li>
+       </ul>
+    </nav>
 <main>
-    <body>
+    <button>Show</button>
+    <h4 class="is-size-2" style="text-align: center;">Result</h4>
     <form>
         <label for="zipNumber">Zipcode:</label>
         <input
