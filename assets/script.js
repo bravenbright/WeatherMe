@@ -32,6 +32,7 @@ let averageWeather = "average+day+recipes"
 function getApi() {
     let zipcode = document.getElementById('zipcode').value;
     if (zipcode.length == 5) {
+        // set zipcode local storage
         document.getElementById('date').innerText = new Date().toLocaleString();
 
         let lookupValue = `&postal_code=${zipcode}&country=US&units=imperial`;
