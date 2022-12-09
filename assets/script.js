@@ -46,7 +46,7 @@ function getApi() {
             temperature.textContent = data.data[0].temp;
             document.body.appendChild(temperature)
             
-        
+        //ussing gtemperature to recommend recipes
      searchUrl = 'https://www.googleapis.com/customsearch/v1?key=' + searchApiKey + '&cx=' + searchEngineId + '&q=' + data.data[0].temp; 
         fetch(searchUrl)
         .then(function(response) {
