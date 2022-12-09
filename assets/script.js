@@ -34,7 +34,7 @@ let averageWeather = "average+day+recipes"
 function getApi() {
     let zipcode = document.getElementById('zipcode').value;
     if (zipcode.length == 5) {
-        localstoreage.setItem('zipcode');
+        localStorage.('zipcode');
         console.log('zipcode');
 
         document.getElementById('date').innerText = new Date().toLocaleString();
