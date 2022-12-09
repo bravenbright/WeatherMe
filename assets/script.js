@@ -31,6 +31,7 @@ let averageWeather = "average+day+recipes"
 
 // })
 
+
 function getApi() {
     let zipcode = document.getElementById('zipcode').value;
     if (zipcode.length == 5) {
@@ -45,10 +46,45 @@ function getApi() {
         );
 
         fetch(searchUrl + warmWeather)
-        .then(response => response.text())
-        .then(data => document.getElementById('weather-data').innerHTML = data);
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('weather-data').innerHTML = data.items[0].title;
+            // broken code in question(line55). It will display if you switch title and link on line 51,
+            // however it will not display both unless they are both encapsulated in seperate sections which is not ideal
+            // but a good backup plan
+            document.getElementById('link-btn').textContent = data.items[0].link;
+            // we will also need an if else statement or look like the ones we had to create warm vs cold weather recipes. 
+//          currently we have the variable inserted manually in the fetch (on line 48)
+        })
+
+            
+
+        // fetch(searchUrl + warmWeather)
+        // .then(response => response.json())
+        // .then(data => {
+          
+        // })
+
+
+        // fetch(searchUrl + warmWeather)
+        // let linkBtn = document.createElement('button')
+        // linkBtn.setAttribute("type", "button")
+        // .then(response => response.json())
+        // .then(data => { 
+        //     // document.getElementById('link-btn').innerHTML = data.items[0].link
+        //     linkBtn.textContent = data.items[0].link; 
+        // })
+        
     }
+    
+    // for (var i = 0; i < data.length)
 }
+
+// for (let i = 0; i < cars.length; i++) {
+//   text += cars[i] + "<br>";
+
+// loop through with math.random 
+
 
 // function getSearchApi() {
 //      searchUrl = 'https://www.googleapis.com/customsearch/v1?key=' + searchApiKey + '&cx=' + searchEngineId + '&q=' + data.data[0].temp; 
