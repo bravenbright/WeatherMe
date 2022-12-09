@@ -5,7 +5,9 @@ const weatherApiUrl = `https://api.weatherbit.io/v2.0/current?key=${weatherApiKe
 // custom search variables
 const searchApiKey = 'AIzaSyAUaXQtGxf5XAyA-aMru4Fu1OyU5C0919k';
 const searchEngineId = '93dfd1403c28d4a84';
+
 const searchUrl = 'https://www.googleapis.com/customsearch/v1?key=' + searchApiKey + '&cx=' + searchEngineId + '&q=';
+
 let warmWeather = "warm+weather+recipes"
 let coldWeather = "cold+weather+recipes"
 let averageWeather = "average+day+recipes"
@@ -58,6 +60,7 @@ function getApi() {
 //         .then(function (data) {
 //             console.log(data);
             
+
 //         })
 //     })
 //     if (temperature > 80) {
@@ -68,11 +71,11 @@ function getApi() {
 //             } (temperature => 60 ) {
 //                 return searchUrl + "&q=" + averageWeather;
 //             }
+
     
 // }
 
 // }
 
 
- 
 
