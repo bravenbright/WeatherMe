@@ -34,6 +34,9 @@ let averageWeather = "average+day+recipes"
 function getApi() {
     let zipcode = document.getElementById('zipcode').value;
     if (zipcode.length == 5) {
+        localstorage.setItem('zipcode');
+        console.log('zipcode');
+
         document.getElementById('date').innerText = new Date().toLocaleString();
 
         let lookupValue = `&postal_code=${zipcode}&country=US&units=imperial`;
@@ -76,5 +79,5 @@ function getApi() {
 
 // }
 
-
-
+local.storage.setItem('zipcode');
+    console.log('zipcode');
