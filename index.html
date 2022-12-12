@@ -15,40 +15,41 @@
     ></script>
 </head>
 
-  <header>
-            <ul>
-                <li>Date: <span id="date"\></li>
-                <li>Temperature: <span id="temp"\></li>
-                
-            </ul>
-        
-    </header>
-
 <body>
     <nav>
        <input type="checkbox" id="check">
        <label for="check" class="checkbutton">
             <i class="fa fa-bars"></i>
        </label>
-       <label class="logo">WeatherMe</label>
+       <label class="title">WeatherMe</label>
        <ul>
         <li><a class="active" href="#">Home</a></li>
-        <li><a href="zipNumber">Choose Zipcode</a></li>
-        <li><a href="#">Temperature</a></li>
+        <li><a href="#zipcode">Choose Zipcode</a></li>
+        <li><a href="#recipes">Recipe Today</a></li>
        </ul>
     </nav>
-
 <main>
-    <form>
-        <label for="zipcode">Zipcode:</label>
-        <input
-            type="text"
-            id="zipcode"
-            onkeyup="getApi()"
-            name="zipcode"
-            maxlength="5"
-        >
-    </form>
+    <section class="section">
+        <form class="zipcodeText">
+            <label for="zipcode">Zipcode:</label>
+            <input
+                type="text"
+                id="zipcode"
+                onkeyup="getApi()"
+                name="zipcode"
+                maxlength="5"
+            >
+        </form>
+        <div class="dateTemp">
+        <ul>
+            <li>Date: <span id="date"\></li>
+            <li>Temperature: <span id="temp"\></li>
+        </ul>
+        </div>
+        
+    </section>
+    <div id="recipes">
+        <h2 class="recipeDay">Recipe for the Day</h2>
 
         <!-- <script async src="https://cse.google.com/cse.js?cx=93dfd1403c28d4a84"> -->
         </script>
@@ -65,6 +66,7 @@
         <figcaption id="result-title"\>
     </figure>
     </section>
+</div>
 </body>
 </main>
 
