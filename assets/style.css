@@ -21,6 +21,8 @@
     scroll-behavior: smooth;
  }
 
+ /* Navigation Bar */
+
  nav {
     background: rgb(48, 85, 98);
     height: 80px;
@@ -58,6 +60,8 @@
     transition: .5s;
  }
 
+ /* Hamburger Icon */
+
  .checkbutton {
     font-size: 30px;
     color: white;
@@ -71,6 +75,8 @@
  #check {
     display: none;
  }
+
+ /* Navigation bar in hamburger icon menu */
 
  @media (max-width:952px){
     label.title {
@@ -112,11 +118,12 @@
         left:0;
     }
  }
- 
+ /* Background image size */
  .section {
     height: calc(100vh - 80px);
  }
 
+/* Date and Temperature */
  section ul li {
     text-align: center;
     color: rgb(48, 85, 98);
@@ -124,11 +131,13 @@
     
  }
 
+ /* Zipcode Text */
 .zipcodeText {
     text-align: center;
     font-size: 136%;
 }
 
+/* Zipcode input */
 #zipcode {
     border-radius: 30px;
     background-color: rgb(109, 141, 173);
@@ -136,6 +145,7 @@
     
 }
 
+/* Recipe Title */
 .recipeDay {
     color: rgb(255, 255, 255);
     text-align: center;
