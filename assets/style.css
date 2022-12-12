@@ -118,7 +118,7 @@
         left:0;
     }
  }
- /* Backgroun image size */
+ /* Background image size */
  .section {
     height: calc(100vh - 80px);
  }
@@ -131,7 +131,7 @@
     
  }
 
- /* Zipecode Text */
+ /* Zipcode Text */
 .zipcodeText {
     text-align: center;
     font-size: 136%;
