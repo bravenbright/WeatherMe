@@ -13,6 +13,12 @@
 
  body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: url(../img/2019-07-22-03-43-45-rotated.jpg);
+    background-size: cover;
+ }
+
+ html {
+    scroll-behavior: smooth;
  }
 
  nav {
@@ -21,7 +27,7 @@
     height:100%;
  }
 
- label.logo {
+ label.title {
     color: white;
     font-size: 34px;
     line-height: 80px;
@@ -67,7 +73,7 @@
  }
 
  @media (max-width:952px){
-    label.logo {
+    label.title {
         font-size: 30px;
         padding-left: 50px;
     }
@@ -106,4 +112,33 @@
         left:0;
     }
  }
+ 
+ .section {
+    height: calc(100vh - 80px);
+ }
 
+ section ul li {
+    text-align: center;
+    color: rgb(48, 85, 98);
+    font-size: 100%;
+    
+ }
+
+.zipcodeText {
+    text-align: center;
+    font-size: 136%;
+}
+
+#zipcode {
+    border-radius: 30px;
+    background-color: rgb(109, 141, 173);
+    font-size: 80%;
+    
+}
+
+.recipeDay {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 150%;
+
+}
